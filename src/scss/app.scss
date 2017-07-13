@@ -1,10 +1,12 @@
 .es-store-modal-wrapper {
+
     background-color: rgba(0,0,0,.8);
     width: 100%;
     height: 100%;
     top: 0px;
     right: 0px;
     left: 0px;
+
     bottom: 0px;
     padding: 15px;
     box-sizing: border-box;
@@ -12,13 +14,13 @@
     position: absolute;
     left: -10000px;
     top: -10000px;
-}
 
-.es-store-modal-wrapper.es-store-modal-open {
-    visibility: visible;
-    position: fixed;
-    left: 0px;
-    top: 0px;
+    &.es-store-modal-open {
+        visibility: visible;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+    }
 }
 
 .es-store-modal-preloader {
@@ -27,27 +29,29 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-}
 
-.es-store-modal-preloader-animation {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    border: 1px solid #53B1FF;
-    border-bottom-color: transparent;
-    transition: opacity .2s ease;
-    -webkit-animation: preloader .4s linear infinite;
-    animation: preloader .4s linear infinite;
-}
+    .es-store-modal-preloader-animation {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        border: 1px solid #53B1FF;
+        border-bottom-color: transparent;
+        transition: opacity .2s ease;
+        -webkit-animation: preloader .4s linear infinite;
+        animation: preloader .4s linear infinite;
+    }
 
-@keyframes preloader {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+
+    @keyframes preloader {
+        from {transform: rotate(0deg);}
+        to {transform: rotate(360deg);}
+    }
 }
 
 
 .es-store-modal {
+
     max-width: 500px;
     height: 600px;
     background-color: #FFFFFF;
@@ -66,38 +70,48 @@
     top: -100%;
     -webkit-transition: top .2s ease-out .2s;
     transition: top .2s ease-out .2s;
+
+    &.es-store-modal-open {
+        visibility: visible;
+        position: relative;
+        left: auto;
+        top: 50%;
+    }
+
+    .es-store-header {
+        background-color: #53B1FF;
+        color: #FFF;
+        padding: 0px;
+        top: 0px;
+        height: 60px;
+        line-height: 60px;
+        padding: 0px 15px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+
+        .es-store-logo {
+            width: 120px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .es-store-iframe {
+        width: 100%;
+        height: calc(100% - 50px);
+        border: none;
+        position: relative;
+        margin-top: -2px;
+    }
 }
 
-.es-store-modal.es-store-modal-open {
-    visibility: visible;
-    position: relative;
-    left: auto;
-    top: 50%;
-}
-
-.es-store-header {
-    background-color: #53B1FF;
-    color: #FFF;
-    padding: 0px;
-    top: 0px;
-    height: 60px;
-    line-height: 60px;
-    padding: 0px 15px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-
-.es-store-logo {
-    width: 120px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.es-store-iframe {
+.es-store-iframe-embed {
     width: 100%;
-    height: calc(100% - 50px);
+    height: 100%;
     border: none;
+    outline: none;
     position: relative;
-    margin-top: -2px;
+    margin: 0px;
+    padding: 0px;
 }

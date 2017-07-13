@@ -1,0 +1,29 @@
+{
+  "name": "js-embed",
+  "version": "1.0.0",
+  "description": "Easy JS library with all the tools you need to embed an EventSquare store in your website.",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EventSquare/js-embed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EventSquare/js-embed/issues"
+  },
+  "homepage": "https://github.com/EventSquare/js-embed#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp-clean-css": "^3.6.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^1.0.0",
+    "gulp-sass": "^3.1.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
