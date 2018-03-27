@@ -9,6 +9,7 @@
     e.contentPath = 'https://s3-eu-west-1.amazonaws.com/eventsquare.plugins/embed';
 
     e.init = function(uri,type,element) {
+
         e.uri = uri;
         //Load stylesheet
         var head  = document.getElementsByTagName('head')[0];
@@ -98,7 +99,7 @@
         e.store.src = "https://" + e.uri + ".eventsquare.co";
         e.store.classList.add("es-store-iframe-embed");
         e.element = document.getElementById(element);
-        e.element.append(e.store);
+        e.element.appendChild(e.store);
 
         w.addEventListener('message', function(event) {
             if(event.data[0]=='setHeight'){
